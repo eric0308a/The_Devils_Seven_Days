@@ -1,0 +1,13 @@
+# Audio assets (often very large in this project)
+www/audio/**/*.ogg filter=lfs diff=lfs merge=lfs -text
+www/audio/**/*.m4a filter=lfs diff=lfs merge=lfs -text
+www/audio/**/*.wav filter=lfs diff=lfs merge=lfs -text
+www/audio/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+www/audio/**/*.flac filter=lfs diff=lfs merge=lfs -text
+
+# RPG Maker encrypted assets and common binary media
+www/img/**/*.rpgmvp filter=lfs diff=lfs merge=lfs -text
+www/movies/**/*.webm filter=lfs diff=lfs merge=lfs -text
+www/movies/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+www/fonts/**/*.ttf filter=lfs diff=lfs merge=lfs -text
+www/fonts/**/*.otf filter=lfs diff=lfs merge=lfs -text

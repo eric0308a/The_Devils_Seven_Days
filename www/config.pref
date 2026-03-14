@@ -1,0 +1,14 @@
+#User Config File
+#Sun May 18 05:13:50 CST 2025
+overwriteFiles=false
+loadInvalidRPGDirs=false
+decrypterRemain=0000000000
+lastRPGParentDir=D\:\\Hgeme20241101\\恶魔酱的五日恶戏  Ver1.17\\恶魔酱的五日恶戏1\\恶魔酱的五日恶戏V1.10
+clearOutputDirBeforeDecrypt=false
+decrypterVersion=000301
+lastOutputDir=output
+decrypterHeaderLen=16
+autoCheckForUpdates=true
+lastOutputParentDir=.
+decrypterSignature=5250474d56000000
+ignoreFakeHeader=true

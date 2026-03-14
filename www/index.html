@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- PWA & Mobile Optimization -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="惡魔醬">
+        <meta name="theme-color" content="#000000">
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- PWA Manifest & Icons -->
+        <link rel="manifest" href="manifest.json">
+        <link rel="icon" href="icon/icon.png" type="image/png">
+        <link rel="apple-touch-icon" href="icon/icon.png">
+        <link rel="apple-touch-startup-image" href="icon/icon.png">
+
+        <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
+        <title>恶魔酱的五日恶戏</title>
+
+        <style>
+            /* Prevent text selection and context menu on touch devices */
+            * {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black;
+                /* iOS Safari full height support */
+                height: 100vh;
+                height: -webkit-fill-available;
+            }
+            canvas {
+                display: block;
+                touch-action: none;
+            }
+        </style>
+    </head>
+    <body style="background-color: black">
+        <script type="text/javascript" src="js/libs/pixi.js"></script>
+        <script type="text/javascript" src="js/libs/pixi-tilemap.js"></script>
+        <script type="text/javascript" src="js/libs/pixi-picture.js"></script>
+        <script type="text/javascript" src="js/libs/fpsmeter.js"></script>
+        <script type="text/javascript" src="js/libs/lz-string.js"></script>
+        <script type="text/javascript" src="js/libs/iphone-inline-video.browser.js"></script>
+        <script type="text/javascript" src="js/rpg_core.js"></script>
+        <script type="text/javascript" src="js/rpg_managers.js"></script>
+        <script type="text/javascript" src="js/rpg_objects.js"></script>
+        <script type="text/javascript" src="js/rpg_scenes.js"></script>
+        <script type="text/javascript" src="js/rpg_sprites.js"></script>
+        <script type="text/javascript" src="js/rpg_windows.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <!-- PWA Service Worker Registration -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('./service-worker.js', { scope: './' })
+                        .then(function (reg) {
+                            console.log('[PWA] Service Worker registered. Scope:', reg.scope);
+                        })
+                        .catch(function (err) {
+                            console.warn('[PWA] Service Worker registration failed:', err);
+                        });
+                });
+            }
+        </script>
+    </body>
+</html>

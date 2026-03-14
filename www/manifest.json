@@ -1,0 +1,25 @@
+{
+  "name": "惡魔醬的五日惡戲",
+  "short_name": "惡魔醬",
+  "description": "惡魔醬的五日惡戲 RPG 遊戲",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "landscape",
+  "lang": "zh-TW",
+  "icons": [
+    {
+      "src": "icon/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["games"],
+  "prefer_related_applications": false
+}

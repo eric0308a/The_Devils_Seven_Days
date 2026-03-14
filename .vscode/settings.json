@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^\\$p='www/js/plugins/PocketBaseCloudSave\\.js'; \\$s=630; \\$e=680; \\$i=0; Get-Content \\$p \\| ForEach-Object \\{ \\$i\\+\\+; if\\(\\$i -ge \\$s -and \\$i -le \\$e\\)\\{ '\\{0,5\\}: \\{1\\}' -f \\$i, \\$_ \\} \\} \\| Out-String$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

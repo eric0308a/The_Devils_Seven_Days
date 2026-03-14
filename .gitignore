@@ -1,0 +1,23 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Node / tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# RPG Maker runtime data (do not version player local saves)
+www/save/*.rpgsave
+
+# Build / temp artifacts
+*.tmp
+*.temp
+*.log

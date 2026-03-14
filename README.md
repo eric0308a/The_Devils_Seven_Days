@@ -9,6 +9,29 @@ http-server
 
 ## 部署
 
+### GitHub Pages（建議）
+
+此專案遊戲檔在 `www/`，不需要搬到根目錄。已提供 workflow：
+
+- `.github/workflows/deploy-pages.yml`
+
+#### 一次性設定
+
+1. 到 GitHub Repo → Settings → Pages。
+2. Build and deployment 的 Source 選 `GitHub Actions`。
+3. 確認預設分支是 `main`（workflow 目前監聽 `main` push）。
+
+#### 日常部署
+
+只要 push 到 `main`，Actions 會自動把 `www/` 發佈到 GitHub Pages。
+
+#### 網址
+
+- 專案頁面通常是：`https://<你的帳號>.github.io/<repo>/`
+- 例如：`https://eric0308a.github.io/The_Devils_Seven_Days/`
+
+若載入舊檔，請先清除瀏覽器快取或重整 Service Worker 快取。
+
 ### 測試
 
 ```bash

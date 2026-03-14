@@ -20,6 +20,7 @@ http-server
 1. 到 GitHub Repo → Settings → Pages。
 2. Build and deployment 的 Source 選 `GitHub Actions`。
 3. 確認預設分支是 `main`（workflow 目前監聽 `main` push）。
+4. 不要使用 `Deploy from a branch`，否則 Git LFS 追蹤的大檔會以 pointer 文字被 Pages 提供，RPG Maker 會出現 `Header is wrong`。
 
 #### 日常部署
 
@@ -31,6 +32,13 @@ http-server
 - 例如：`https://eric0308a.github.io/The_Devils_Seven_Days/`
 
 若載入舊檔，請先清除瀏覽器快取或重整 Service Worker 快取。
+
+#### 典型錯誤（Header is wrong）
+
+若主控台顯示 `rpg_core.js ... Decrypter.decryptArrayBuffer ... Header is wrong`，通常代表加密資源（例如 `.rpgmvp`）被部署成 Git LFS pointer 檔。
+
+- 本專案 workflow 已在 checkout 加入 `lfs: true`，並會在部署前檢查 pointer 檔。
+- 發生後請重新執行一次 workflow（或重新 push 一次）再清除站點快取。
 
 ### 測試
 
